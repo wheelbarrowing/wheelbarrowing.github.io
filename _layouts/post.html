@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+</head>
+<body>
+  <header>
+    <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+    <p>{{ site.description }}</p>
+  </header>
+  <main>
+    <article>
+      <h2>{{ page.title }}</h2>
+      <p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
+      <div>
+        {{ content }}
+      </div>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2024 Mohit. All rights reserved.</p>
+  </footer>
+</body>
+</html>
